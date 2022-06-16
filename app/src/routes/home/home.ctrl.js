@@ -18,7 +18,7 @@ const users = {
 const process = {
     login :  (req, res) => {
     const id = req.body.id,
-        psword = req.body.psword
+        psword = req.body.psword;
 
     if(users.id.includes(id)){
         const idx = users.id.indexOf(id);
