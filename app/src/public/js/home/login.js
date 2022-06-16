@@ -13,11 +13,13 @@ function login(){
     };
     fetch("/login", {
         method: "POST",
-        header: {
-            "Content-Type": "applecation/json",
+        headers: {
+            "Content-Type": "application/json",
         },
         body : JSON.stringify(req),
-    }); 
+    })
+    .then((res) => res.json())
+    .then(console.log);
 }
 
 
